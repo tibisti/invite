@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تحقق دعوة تيبستي</title>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#13264A;--gold:#C9A45C;--gold-d:#A9843F;--line:rgba(201,164,92,.55)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Tajawal',sans-serif;background:#fff;color:#13264A;direction:rtl;display:flex;justify-content:center;padding:30px 18px 40px}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(60% 40% at 50% 0%,rgba(201,164,92,.13),transparent 70%)}
+.wrap{position:relative;width:100%;max-width:520px;text-align:center}
+.logo{display:block;width:180px;max-width:60%;margin:0 auto 26px}
+.arch{position:relative;border:1px solid var(--line);border-bottom:0;border-radius:240px 240px 0 0;padding:64px 26px 22px}
+.arch::before{content:"";position:absolute;inset:8px;bottom:-1px;border:1px solid rgba(201,164,92,.28);border-bottom:0;border-radius:232px 232px 0 0;pointer-events:none}
+.eyebrow{font-size:13px;color:var(--gold-d);font-weight:500}
+h1{font-family:'El Messiri',serif;font-weight:700;font-size:50px;line-height:1.25;margin:6px 0 10px}
+.opening{font-size:17px;line-height:1.9;margin-top:6px}
+.opening2{font-size:16px;line-height:1.9;margin-top:10px;opacity:.9}
+.gname{font-family:'El Messiri',serif;font-weight:600;font-size:32px;line-height:1.3;margin-top:4px}
+.gsub{font-size:14px;opacity:.7;margin-top:2px}
+.date{margin-top:22px}.days{display:flex;align-items:center;justify-content:center;gap:16px}
+.days .d{font-family:'El Messiri',serif;font-weight:700;font-size:56px;line-height:1}
+.days .dash{width:28px;height:1px;background:var(--gold)}
+.month{font-size:14px;margin-top:8px;font-weight:700;color:var(--gold-d)}
+.rows{display:grid;grid-template-columns:1fr 1fr;margin-top:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rows>div{padding:12px 6px}.rows>div+div{border-right:1px solid var(--line)}
+.rows small{display:block;font-size:11px;font-weight:700;color:var(--gold-d);margin-bottom:4px}
+.rows span{display:block;font-size:14px;font-weight:700;line-height:1.5}.rows em{display:block;font-style:normal;font-size:12px;opacity:.65}
+.perf{position:relative;height:30px}
+.perf::before{content:"";position:absolute;top:50%;left:22px;right:22px;border-top:1.5px dashed var(--line)}
+.perf i{position:absolute;top:50%;width:26px;height:26px;margin-top:-13px;border-radius:50%;border:1px solid var(--line);background:#fff}
+.perf i:first-child{right:-14px;clip-path:inset(0 50% 0 0)}.perf i:last-child{left:-14px;clip-path:inset(0 0 0 50%)}
+.stub{border:1px solid var(--line);border-top:0;border-radius:0 0 22px 22px;padding:10px 20px 26px;margin-top:-1px}
+.st{width:58px;height:58px;border-radius:50%;margin:6px auto 8px;display:flex;align-items:center;justify-content:center}
+.st svg{width:28px;height:28px}.ok{background:#1E9E5A}.bad{background:#B3261E}
+.stt{font-family:'El Messiri',serif;font-size:24px;font-weight:700}
+.org{font-size:15px;font-weight:700;color:var(--gold-d);margin-top:6px}
+.code{margin-top:10px;font-weight:700;letter-spacing:4px;font-size:16px;direction:ltr}
+.time{direction:ltr;margin-top:6px;color:#1E9E5A;font-weight:700;font-size:15px}
+.btn{display:block;margin-top:18px;padding:16px;background:var(--navy);color:#E6CB92;border-radius:999px;text-decoration:none;font:700 18px 'Tajawal'}
+.foot{margin-top:24px;font-size:12px;opacity:.7}
+.btn{border:0;width:100%;cursor:pointer}.btn[disabled]{opacity:.6}
+.load{padding:20px 0;opacity:.6}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="logo" src="logo.png" alt="TIBESTI">
+  <div class="arch">
+    <div class="eyebrow">قمة ليبيا للاستثمار 2026</div>
+    <h1>دعوة</h1>
+    <div id="guest" class="hidden">
+      <p class="opening">بكل سرور وتقدير<br>تتشرّف شركة <b>تيبستي للاستثمار العقاري</b><br>بدعوة</p>
+      <div class="gname" id="gName"></div>
+      <div class="gsub" id="gSub"></div>
+      <p class="opening2">لزيارة جناحها ضمن فعاليات <b style="white-space:nowrap">قمة ليبيا للاستثمار 2026</b><br>ويسعدنا تشريفكم ولقاؤكم</p>
+    </div>
+    <div class="date"><div class="days"><span class="d">21</span><span class="dash"></span><span class="d">26</span></div><div class="month">نوفمبر 2026</div></div>
+    <div class="rows"><div><small>الوقت</small><span>12:00 ظهراً</span><em>حتى 10:00 مساءً</em></div><div><small>المكان</small><span>معرض طرابلس الدولي</span></div></div>
+  </div>
+  <div class="perf"><i></i><i></i></div>
+  <div class="stub" id="stub"><div class="load">جاري التحقق…</div></div>
+  <div class="foot">بيع · إيجار · استثمار · تشطيب — ليبيا ومصر</div>
+</div>
+<script>
+const API = "https://script.google.com/macros/s/AKfycbwQjfjcf3HsFnbLOCcwtFsXVUha716w3yw3bGQ0CTfBbJk9C5QFju9K2po9UdVmiYtqjw/exec";
+const code = (new URLSearchParams(location.search).get("c") || "").trim();
+const $ = id => document.getElementById(id);
+const esc = x => String(x||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const OK = '<div class="st ok"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>';
+const BAD = '<div class="st bad"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>';
+
+function render(d){
+  if(!d || !d.ok){
+    $("stub").innerHTML = BAD + '<div class="stt">دعوة غير موجودة</div><div class="code">' + esc(code) + '</div>';
+    return;
+  }
+  $("guest").classList.remove("hidden");
+  $("gName").textContent = d.name;
+  $("gSub").textContent = d.title || ""; $("gSub").style.display = d.title ? "block" : "none";
+  const org = d.org ? '<div class="org">' + esc(d.org) + '</div>' : '';
+  if(d.att){
+    $("stub").innerHTML = OK + '<div class="stt">' + (d.just ? 'تم تسجيل الحضور' : 'سبق تسجيل الحضور') + '</div>' + org +
+      '<div class="code">' + esc(code) + '</div><div class="time">' + esc(d.att) + '</div>';
+  } else {
+    $("stub").innerHTML = OK + '<div class="stt">دعوة صحيحة</div>' + org + '<div class="code">' + esc(code) + '</div>' +
+      '<button class="btn" id="ci" type="button">تسجيل الحضور</button>';
+    $("ci").onclick = () => { $("ci").disabled = true; $("ci").textContent = "جاري التسجيل…"; load(true); };
+  }
+}
+function fail(){
+  $("stub").innerHTML = BAD + '<div class="stt">تعذّر الاتصال</div><div class="code">' + esc(code) + '</div>' +
+    '<button class="btn" type="button" onclick="location.reload()">إعادة المحاولة</button>';
+}
+function load(checkin){
+  if(!code){ render(null); return; }
+  fetch(API + "?api=1&code=" + encodeURIComponent(code) + (checkin ? "&checkin=1" : ""), {credentials:"omit"})
+    .then(r => r.json()).then(render).catch(fail);
+}
+load(false);
+</script>
+</body>
+</html>
