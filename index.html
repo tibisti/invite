@@ -2538,7 +2538,7 @@ function showCard(g){
   const esc=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); let sub=g.title?esc(g.title):""; $("gSub").innerHTML=sub; $("gSub").style.display=sub?"block":"none";
   $("gCode").textContent = g.code;
   $("qr").innerHTML = "";
-  const qrText = "TIBESTI | " + (isVip?"VIP":"عادي") + " | " + g.code + " | " + g.name + " | " + g.phone + " | " + g.org;
+  const qrText = CONFIG.sheet + "?code=" + encodeURIComponent(g.code);
   try{
     const q = qrcode(0, "M"); q.addData(qrText); q.make();
     $("qr").innerHTML = q.createSvgTag({cellSize: 5, margin: 0, scalable: true});
